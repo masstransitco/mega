@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // Target modern or a suitable ES standard
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    // Next.js typically defaults to "bundler" resolution in latest versions
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+
+    // Next.js plugin
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+
+    // Path alias if you use @/* => ./src/*
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
